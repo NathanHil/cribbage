@@ -22,7 +22,7 @@ describe('hand scoring', () => {
     expect(hand(['JH', '2C', '4D', '8S'], 'QS')).toBe(0);
   });
   it('triple run (3-3-3-4-5 = 3 runs + 3 pairs + fifteens)', () =>
-    expect(hand(['3H', '3D', '3S', '4C'], '5H')).toBe(3 * 3 + 6 + 2 * 3 /* 3+4+5+3 = 15 x3 */));
+    expect(hand(['3H', '3D', '3S', '4C'], '5H')).toBe(3 * 3 + 6 + 2 * 3 /* 9 for runs, 6 for pairs, 6 for 15's = 21 */));
 });
 
 describe('pegging scoring', () => {
